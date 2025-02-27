@@ -95,6 +95,7 @@ const shortcutItem = {
     shortTitle: "Do it",
     subtitle: "iOS only",
     iconName: "ic_awesome",
+    symbolName: "house.fill", // SF Symbol Name (iOS only)
     data: {
         "foo": "bar",
     },
@@ -127,7 +128,9 @@ const shortcutItems = await Shortcuts.getShortcuts();
 
 To display icons with your shortcuts / actions you will need to add them to your
 project. Once added use the name of your iOS asset or Android drawable as the
-value for `iconName` above.
+value for `iconName` above. You can also use SF Symbol Name like "house.fill"
+or `globe.europe.africa` for `symbolName` above (iOS only). If `symbolName` is
+filled, `iconName` is not taken into account.
 
 ### iOS - Asset catalog
 
@@ -135,9 +138,7 @@ Add new assets to your [Asset catalog](https://developer.apple.com/library/archi
 `pdf` (vector) files.
 
 Refer
-[Custom Icons : Home Screen Quick Action Icon
-Size](https://developer.apple.com/design/human-interface-guidelines/home-screen-quick-actions#Best-practices)
-to learn about the dimensions and design specifications.
+[Custom Icons : Home Screen Quick Action Icon Size](https://developer.apple.com/design/human-interface-guidelines/home-screen-quick-actions) to learn about the dimensions and design specifications.
 
 ### Android - drawable
 
